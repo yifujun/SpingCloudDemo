@@ -1,0 +1,1 @@
+server:  port: 8060spring:  application:    name: feigneureka:  client:    service-url:      defaultZone: http://localhost:8761/eureka/  instance:    prefer-ip-address: true    #就可以将IP注册到Eureka Server上，而如果不配置就是机器的主机名。feign:  hystrix:    enabled: true   #是否开启熔断器     熔断器的作用是:如果调用的子项目服务出现问题，熔断器会立即停掉这个服务

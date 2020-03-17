@@ -1,0 +1,1 @@
+server:  port: 8030spring:  application:    name: gatewayeureka:  client:    service-url:      defaultZone: http://localhost:8761/eureka/      #自带了负载均衡功能，修改 provider 的代码。zuul:     #给各个微服务提供一个入口  routes:    provider: /p/**   #proveder是一个子项目的一个名字 p是别名 给proveder做映射  简单直接：给服务提供者 provider 设置映射
